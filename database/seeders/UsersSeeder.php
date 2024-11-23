@@ -14,6 +14,7 @@ class UsersSeeder extends Seeder
         User::create([
             'name' => 'Administrator Floralyze',
             'email' => 'administrator@floralyze.com',
+            'gender' => true,
             'email_verified_at' => now(),
             'password' => Hash::make('Adm!nAdm?n'),
             'remember_token' => Str::random(10),

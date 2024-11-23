@@ -32,6 +32,12 @@
                         <a class="nav-link" href="{{ route('role.index') }}">{{ __('Role') }}</a>
                     </li>
                 </ul>
+
+                <ul class="dropdown-menu">
+                    <li class="{{ Request::routeIs('user.index') ? 'active' : '' }}">
+                        <a class="nav-link" href="{{ route('user.index') }}">{{ __('User') }}</a>
+                    </li>
+                </ul>
             </li>
         </ul>
     </aside>

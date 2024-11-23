@@ -3,6 +3,7 @@
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RoleController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -35,6 +36,16 @@ Route::group(['prefix' => 'master', 'middleware' => ['auth:web', 'verified']], f
         Route::put('/update/{id}', [RoleController::class, 'update'])->name('update');
         Route::delete('/{id}/destroy', [RoleController::class, 'destroy'])->name('destroy');
         Route::get('/data', [RoleController::class, 'data'])->name('data');
+    });
+
+    Route::name('user.')->prefix('user')->group(function () {
+        Route::get('/', [UserController::class, 'index'])->name('index');
+        Route::get('/create', [UserController::class, 'create'])->name('create');
+        Route::post('/store', [UserController::class, 'store'])->name('store');
+        Route::get('/{id}/edit', [UserController::class, 'edit'])->name('edit');
+        Route::put('/update/{id}', [UserController::class, 'update'])->name('update');
+        Route::delete('/{id}/destroy', [UserController::class, 'destroy'])->name('destroy');
+        Route::get('/data', [UserController::class, 'data'])->name('data');
     });
 });
 
