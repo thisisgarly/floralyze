@@ -28,13 +28,6 @@
                 </a>
             </li>
 
-            <li class="">
-                <a class="nav-link" href="">
-                    <i class="fas fa-desktop"></i>
-                    <span>{{ __('Plant Monitoring') }}</span>
-                </a>
-            </li>
-
             <li class="menu-header">{{ __('Settings') }}</li>
 
             <li class="dropdown">

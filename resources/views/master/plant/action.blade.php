@@ -1,4 +1,8 @@
 <div class="d-flex">
+    <a href="{{ route('plant-monitoring.show', Crypt::encrypt($id)) }}" class="ml-2 btn btn-info">
+        <span class="fas fa-chart-line"></span>
+    </a>
+
     <a href="{{ route('plant.edit', Crypt::encrypt($id)) }}" class="ml-2 btn btn-warning">
         <span class="fas fa-edit"></span>
     </a>

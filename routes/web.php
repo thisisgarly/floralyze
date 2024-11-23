@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PlantController;
+use App\Http\Controllers\PlantMonitoringController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
@@ -57,6 +58,11 @@ Route::group(['prefix' => 'master', 'middleware' => ['auth:web', 'verified']], f
         Route::put('/update/{id}', [PlantController::class, 'update'])->name('update');
         Route::delete('/{id}/destroy', [PlantController::class, 'destroy'])->name('destroy');
         Route::get('/data', [PlantController::class, 'data'])->name('data');
+    });
+
+    Route::name('plant-monitoring.')->prefix('plant-monitoring')->group(function () {
+        Route::get('/{id}/show', [PlantMonitoringController::class, 'show'])->name('show');
+        Route::get('/{id}/data', [PlantMonitoringController::class, 'data'])->name('data');
     });
 });
 

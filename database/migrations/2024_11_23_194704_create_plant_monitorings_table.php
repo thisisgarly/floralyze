@@ -17,6 +17,7 @@ return new class extends Migration
             $table->integer('temperature');
             $table->integer('humidity');
             $table->enum('status', ['Lembab', 'Terawat', 'Kering']);
+            $table->date('date');
             $table->timestamps();
 
             $table->index('plant_id')->references('id')->on('plants')->onDelete('cascade');

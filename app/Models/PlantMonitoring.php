@@ -20,5 +20,6 @@ class PlantMonitoring extends Model
         'temperature',
         'humidity',
         'status',
+        'date',
     ];
 }
