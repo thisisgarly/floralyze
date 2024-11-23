@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="{{ asset('vendor/stisla-2.2.0/dist/assets/css/components.css') }}">
 </head>
 <body>
+    @include('sweetalert::alert', ['cdn' => "https://cdn.jsdelivr.net/npm/sweetalert2@9"])
+
     <div id="app">
         <div class="main-wrapper main-wrapper-1">
             <div class="navbar-bg">
