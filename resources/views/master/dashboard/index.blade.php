@@ -19,7 +19,7 @@
             <div class="hero bg-primary text-white">
                 <div class="hero-inner">
                     <h2>Welcome Back, {{ Auth::user()->name }}!</h2>
-                    <p class="lead">Hopefully always in good health.</p>
+                    <p class="lead">Start your green journey today...</p>
                 </div>
             </div>
         </div>
