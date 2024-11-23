@@ -60,6 +60,13 @@
             </form>
         </div>
     </div>
+
+    <div class="mt-5 text-muted text-center">
+        {{ __('Don\'t have an account?') }} <a href="{{ route('register') }}">{{ __('Create One') }}</a>
+    </div>
+    <div class="simple-footer">
+        {{ __('Copyright') }} &copy; {{ __('Floralyze 2024') }}
+    </div>
 @endsection
 
 @push('scripts')
