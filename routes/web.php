@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\PlantController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
@@ -46,6 +47,16 @@ Route::group(['prefix' => 'master', 'middleware' => ['auth:web', 'verified']], f
         Route::put('/update/{id}', [UserController::class, 'update'])->name('update');
         Route::delete('/{id}/destroy', [UserController::class, 'destroy'])->name('destroy');
         Route::get('/data', [UserController::class, 'data'])->name('data');
+    });
+
+    Route::name('plant.')->prefix('plant')->group(function () {
+        Route::get('/', [PlantController::class, 'index'])->name('index');
+        Route::get('/create', [PlantController::class, 'create'])->name('create');
+        Route::post('/store', [PlantController::class, 'store'])->name('store');
+        Route::get('/{id}/edit', [PlantController::class, 'edit'])->name('edit');
+        Route::put('/update/{id}', [PlantController::class, 'update'])->name('update');
+        Route::delete('/{id}/destroy', [PlantController::class, 'destroy'])->name('destroy');
+        Route::get('/data', [PlantController::class, 'data'])->name('data');
     });
 });
 

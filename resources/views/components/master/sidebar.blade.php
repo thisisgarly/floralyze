@@ -21,6 +21,13 @@
 
             <li class="menu-header">{{ __('Manage Data') }}</li>
 
+            <li class="{{ Request::routeIs('plant.index') ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('plant.index') }}">
+                    <i class="fas fa-box"></i>
+                    <span>{{ __('Plant') }}</span>
+                </a>
+            </li>
+
             <li class="">
                 <a class="nav-link" href="">
                     <i class="fas fa-desktop"></i>
