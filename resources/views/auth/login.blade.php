@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <div class="card card-success">
+    <div class="card card-primary">
         <div class="card-body">
             <form method="POST" action="{{ route('login') }}">
                 @csrf
@@ -53,7 +53,7 @@
                 </div>
 
                 <div class="form-group">
-                    <button type="submit" class="btn btn-success btn-lg btn-block" tabindex="4">
+                    <button type="submit" class="btn btn-primary btn-lg btn-block" tabindex="4">
                         {{ __('Login') }}
                     </button>
                 </div>
