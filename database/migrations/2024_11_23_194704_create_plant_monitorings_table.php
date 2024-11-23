@@ -16,7 +16,6 @@ return new class extends Migration
             $table->uuid('plant_id');
             $table->integer('temperature');
             $table->integer('humidity');
-            $table->enum('status', ['Lembab', 'Terawat', 'Kering']);
             $table->date('date');
             $table->timestamps();
 

@@ -38,7 +38,6 @@
                                     <th class="text-center">{{ __('Time') }}</th>
                                     <th class="text-center">{{ __('Temperature') }}</th>
                                     <th class="text-center">{{ __('Humidity') }}</th>
-                                    <th class="text-center">{{ __('Status') }}</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -66,7 +65,6 @@
                 { data: 'humidity', name: 'humidity', width: '10%', class: 'text-center' },
                 { data: 'temperature', name: 'temperature', width: '10%', class: 'text-center' },
                 { data: 'humidity', name: 'humidity', width: '10%', class: 'text-center' },
-                { data: 'status', name: 'status', width: '10%', class: 'text-center' },
             ]
         })
     </script>
