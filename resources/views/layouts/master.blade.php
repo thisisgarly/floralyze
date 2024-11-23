@@ -45,6 +45,7 @@
             @include('components.master.footer')
         </div>
     </div>
+    
     <script src="{{ asset('vendor/stisla-2.2.0/dist/assets/modules/jquery.min.js') }}"></script>
     <script src="{{ asset('vendor/stisla-2.2.0/dist/assets/modules/popper.js') }}"></script>
     <script src="{{ asset('vendor/stisla-2.2.0/dist/assets/modules/tooltip.js') }}"></script>
