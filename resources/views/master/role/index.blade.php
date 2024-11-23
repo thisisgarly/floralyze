@@ -37,6 +37,7 @@
                                 <tr>
                                     <th class="text-center">{{ __('No') }}</th>
                                     <th class="text-center">{{ __('Role Name') }}</th>
+                                    <th class="text-center">{{ __('Guard Name') }}</th>
                                     <th class="text-center">{{ __('Action') }}</th>
                                 </tr>
                             </thead>
@@ -67,6 +68,7 @@
                         return meta.row + meta.settings._iDisplayStart + 1;
                 }, width: '5%', class: 'text-center' },
                 { data: 'name', name: 'name' },
+                { data: 'guard_name', name: 'guard_name', class: 'text-center' },
                 { data: 'action', name: 'action', orderable: true, searchable: true, width: '5%' }
             ]
         })
